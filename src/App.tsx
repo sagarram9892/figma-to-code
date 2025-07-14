@@ -18,7 +18,6 @@ import url from "./assets/url.png";
 import assigned from "./assets/assigned.png";
 import abc from "./assets/abc.png";
 import image from "./assets/Ellipse 1.png";
-import bell from "./assets/bell.png";
 import hash from "./assets/hash.png";
 
 // Types
@@ -480,13 +479,26 @@ const SpreadsheetPrototype = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
-            <div className="relative mr-0">
-              <img src={bell} alt="" className="w-14 h-6 text-gray-600" />
-              <span className="absolute -top-1 -right-1 pb-[2px] pl-[2px] bg-green-700 text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
+            <div className="relative">
+              <div className="">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 1.99622C16.0499 1.99622 19.3567 5.19097 19.4958 9.24528L19.5 9.49622V13.5932L20.88 16.7492C20.949 16.9071 20.9847 17.0776 20.9847 17.25C20.9847 17.9404 20.425 18.5 19.7347 18.5L15 18.5015C15 20.1583 13.6568 21.5015 12 21.5015C10.4023 21.5015 9.09633 20.2526 9.00508 18.6778L8.99954 18.4992L4.27485 18.5C4.10351 18.5 3.93401 18.4648 3.77685 18.3965C3.14365 18.1215 2.8533 17.3852 3.12834 16.752L4.49999 13.5941V9.49612C4.50059 5.34132 7.85208 1.99622 12 1.99622ZM13.4995 18.4992L10.5 18.5015C10.5 19.3299 11.1716 20.0015 12 20.0015C12.7797 20.0015 13.4204 19.4066 13.4931 18.646L13.4995 18.4992ZM12 3.49622C8.67983 3.49622 6.00047 6.17048 5.99999 9.49622V13.9059L4.65601 17H19.3525L18 13.9068L18.0001 9.50908L17.9964 9.28388C17.8853 6.0504 15.2416 3.49622 12 3.49622Z"
+                    fill="#121212"
+                  ></path>
+                </svg>
+              </div>
+              <span className="absolute -top-1 -right-1 pr-[2px] py-[2px] pl-[2px] bg-green-700 text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
                 2
               </span>
             </div>
-            <div className="hidden  w-full h-8 rounded-full sm:flex items-center justify-center">
+            <div className="hidden ml-3  w-full h-8 rounded-full sm:flex items-center justify-center">
               <span className="flex gap-1.5 w-25 sm:w-30 items-center text-sm font-medium">
                 <img src={image} alt="" className="h-8 w-8 rounded-full" />{" "}
                 <p className="">
@@ -530,7 +542,6 @@ const SpreadsheetPrototype = () => {
                 className="flex items-center space-x-1 px-3 py-2 text-sm "
                 onClick={() => console.log("Hide fields clicked")}
               >
-                {/* <img src={hide} alt="" /> */}
                 <svg
                   width="20"
                   height="20"
@@ -549,7 +560,6 @@ const SpreadsheetPrototype = () => {
                 className="flex items-center space-x-1 px-3 py-2 text-sm "
                 onClick={() => console.log("Sort clicked")}
               >
-                {/* <img src={short} alt="" /> */}
                 <svg
                   width="20"
                   height="20"
@@ -568,7 +578,6 @@ const SpreadsheetPrototype = () => {
                 className="flex items-center space-x-1 px-3 py-2 text-sm"
                 onClick={() => console.log("Filter clicked")}
               >
-                {/* <img src={filter} alt="" /> */}
                 <svg
                   width="20"
                   height="20"
@@ -588,7 +597,6 @@ const SpreadsheetPrototype = () => {
                   className="flex items-center space-x-1 px-3 py-2 text-sm"
                   onClick={() => console.log("Cell view clicked")}
                 >
-                  {/* <img src={cellView} alt="" /> */}
                   <svg
                     width="20"
                     height="20"
@@ -629,7 +637,6 @@ const SpreadsheetPrototype = () => {
               className="text-zinc-500 flex items-center space-x-1 px-3 py-2 text-sm border border-gray-200 rounded hover:bg-gray-50"
               onClick={() => console.log("Share clicked")}
             >
-              {/* <img src={share} alt="" /> */}
               <svg
                 width="20"
                 height="20"
@@ -650,7 +657,6 @@ const SpreadsheetPrototype = () => {
               className="w-[178px] h-10 flex items-center justify-center space-x-1 px-3 text-sm bg-[#4B6A4F] text-white rounded-lg hover:bg-green-700"
               onClick={() => console.log("New Action clicked")}
             >
-              {/* <img src={action} alt="" /> */}
               <svg
                 width="20"
                 height="20"
@@ -669,27 +675,45 @@ const SpreadsheetPrototype = () => {
         </div>
       </div>
 
-      {/* Action Buttons */}
       <div className="h-10 bg-white border-b border-gray-200 px-4 pl-10">
         <div className="h-full w-full justify-between items-center flex space-x-2 overflow-x-auto">
           <div className="h-full flex items-center w-[720px] bg-[#E2E2E2]">
             <button className="ml-2 px-3 py-1 text-sm bg-[#EEEEEE] text-[#545454]/80 rounded whitespace-nowrap">
               <div className="flex justify-center items-center gap-1.5">
-                {/* <img src={financial} alt="" /> */}
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.16667 4.66666C6.44281 4.66666 6.66667 4.89052 6.66667 5.16666C6.66667 5.4177 6.48166 5.62553 6.24055 5.66124L6.16667 5.66666H4.66667C3.378 5.66666 2.33333 6.71133 2.33333 8C2.33333 9.24264 3.30471 10.2584 4.52956 10.3294L4.66667 10.3333H6.16667C6.44281 10.3333 6.66667 10.5572 6.66667 10.8333C6.66667 11.0844 6.48166 11.2922 6.24055 11.3279L6.16667 11.3333H4.66667C2.82572 11.3333 1.33333 9.84095 1.33333 8C1.33333 6.21483 2.73664 4.75743 4.5003 4.67074L4.66667 4.66666H6.16667ZM11.3333 4.66666C13.1743 4.66666 14.6667 6.15905 14.6667 8C14.6667 9.78516 13.2634 11.2426 11.4997 11.3293L11.3333 11.3333H9.83333C9.55719 11.3333 9.33333 11.1095 9.33333 10.8333C9.33333 10.5823 9.51834 10.3745 9.75945 10.3388L9.83333 10.3333H11.3333C12.622 10.3333 13.6667 9.28866 13.6667 8C13.6667 6.75736 12.6953 5.74159 11.4704 5.67062L11.3333 5.66666H9.83333C9.55719 5.66666 9.33333 5.44281 9.33333 5.16666C9.33333 4.91563 9.51834 4.7078 9.75945 4.67209L9.83333 4.66666H11.3333ZM4.66667 7.5H11.3333C11.6095 7.5 11.8333 7.72385 11.8333 8C11.8333 8.25313 11.6452 8.46232 11.4012 8.49543L11.3333 8.5H4.66667C4.39052 8.5 4.16667 8.27614 4.16667 8C4.16667 7.74687 4.35477 7.53767 4.59882 7.50456L4.66667 7.5H11.3333H4.66667Z" fill="#1A8CFF"></path></svg>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.16667 4.66666C6.44281 4.66666 6.66667 4.89052 6.66667 5.16666C6.66667 5.4177 6.48166 5.62553 6.24055 5.66124L6.16667 5.66666H4.66667C3.378 5.66666 2.33333 6.71133 2.33333 8C2.33333 9.24264 3.30471 10.2584 4.52956 10.3294L4.66667 10.3333H6.16667C6.44281 10.3333 6.66667 10.5572 6.66667 10.8333C6.66667 11.0844 6.48166 11.2922 6.24055 11.3279L6.16667 11.3333H4.66667C2.82572 11.3333 1.33333 9.84095 1.33333 8C1.33333 6.21483 2.73664 4.75743 4.5003 4.67074L4.66667 4.66666H6.16667ZM11.3333 4.66666C13.1743 4.66666 14.6667 6.15905 14.6667 8C14.6667 9.78516 13.2634 11.2426 11.4997 11.3293L11.3333 11.3333H9.83333C9.55719 11.3333 9.33333 11.1095 9.33333 10.8333C9.33333 10.5823 9.51834 10.3745 9.75945 10.3388L9.83333 10.3333H11.3333C12.622 10.3333 13.6667 9.28866 13.6667 8C13.6667 6.75736 12.6953 5.74159 11.4704 5.67062L11.3333 5.66666H9.83333C9.55719 5.66666 9.33333 5.44281 9.33333 5.16666C9.33333 4.91563 9.51834 4.7078 9.75945 4.67209L9.83333 4.66666H11.3333ZM4.66667 7.5H11.3333C11.6095 7.5 11.8333 7.72385 11.8333 8C11.8333 8.25313 11.6452 8.46232 11.4012 8.49543L11.3333 8.5H4.66667C4.39052 8.5 4.16667 8.27614 4.16667 8C4.16667 7.74687 4.35477 7.53767 4.59882 7.50456L4.66667 7.5H11.3333H4.66667Z"
+                    fill="#1A8CFF"
+                  ></path>
+                </svg>
                 Q3 Financial Overview
               </div>
             </button>
-            {/* <img src={refresh} alt="" className="pl-3" /> */}
-           <div className="pl-3">
-             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.8337 3.45341C10.6663 3.67298 10.7085 3.98673 10.9281 4.15419C12.1203 5.06343 12.8333 6.47214 12.8333 8C12.8333 10.4907 10.9494 12.5413 8.52888 12.8047L8.97978 12.3536C9.17505 12.1583 9.17505 11.8417 8.97978 11.6464C8.80227 11.4689 8.5245 11.4528 8.32876 11.598L8.27268 11.6464L6.93934 12.9798C6.76183 13.1573 6.7457 13.4351 6.89093 13.6308L6.93934 13.6869L8.27268 15.0202C8.46794 15.2155 8.78452 15.2155 8.97978 15.0202C9.1573 14.8427 9.17343 14.5649 9.0282 14.3692L8.97978 14.3131L8.47963 13.8139C11.4769 13.57 13.8333 11.0602 13.8333 8C13.8333 6.15685 12.9721 4.45548 11.5345 3.35905C11.3149 3.19159 11.0012 3.23384 10.8337 3.45341ZM7.02022 0.979782C6.82496 1.17504 6.82496 1.49163 7.02022 1.68689L7.51972 2.18616C4.52273 2.4304 2.16667 4.94006 2.16667 8C2.16667 9.76297 2.95418 11.3983 4.28721 12.4994C4.50011 12.6753 4.81527 12.6452 4.99113 12.4323C5.16699 12.2194 5.13697 11.9043 4.92407 11.7284C3.81863 10.8153 3.16667 9.46147 3.16667 8C3.16667 5.50958 5.05022 3.45908 7.47047 3.19535L7.02022 3.64645C6.82496 3.84171 6.82496 4.15829 7.02022 4.35356C7.21549 4.54882 7.53207 4.54882 7.72733 4.35356L9.06066 3.02022C9.25593 2.82496 9.25593 2.50838 9.06066 2.31312L7.72733 0.979782C7.53207 0.78452 7.21549 0.78452 7.02022 0.979782Z" fill="#FA6736"></path></svg>
-           </div>
+            <div className="pl-3">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.8337 3.45341C10.6663 3.67298 10.7085 3.98673 10.9281 4.15419C12.1203 5.06343 12.8333 6.47214 12.8333 8C12.8333 10.4907 10.9494 12.5413 8.52888 12.8047L8.97978 12.3536C9.17505 12.1583 9.17505 11.8417 8.97978 11.6464C8.80227 11.4689 8.5245 11.4528 8.32876 11.598L8.27268 11.6464L6.93934 12.9798C6.76183 13.1573 6.7457 13.4351 6.89093 13.6308L6.93934 13.6869L8.27268 15.0202C8.46794 15.2155 8.78452 15.2155 8.97978 15.0202C9.1573 14.8427 9.17343 14.5649 9.0282 14.3692L8.97978 14.3131L8.47963 13.8139C11.4769 13.57 13.8333 11.0602 13.8333 8C13.8333 6.15685 12.9721 4.45548 11.5345 3.35905C11.3149 3.19159 11.0012 3.23384 10.8337 3.45341ZM7.02022 0.979782C6.82496 1.17504 6.82496 1.49163 7.02022 1.68689L7.51972 2.18616C4.52273 2.4304 2.16667 4.94006 2.16667 8C2.16667 9.76297 2.95418 11.3983 4.28721 12.4994C4.50011 12.6753 4.81527 12.6452 4.99113 12.4323C5.16699 12.2194 5.13697 11.9043 4.92407 11.7284C3.81863 10.8153 3.16667 9.46147 3.16667 8C3.16667 5.50958 5.05022 3.45908 7.47047 3.19535L7.02022 3.64645C6.82496 3.84171 6.82496 4.15829 7.02022 4.35356C7.21549 4.54882 7.53207 4.54882 7.72733 4.35356L9.06066 3.02022C9.25593 2.82496 9.25593 2.50838 9.06066 2.31312L7.72733 0.979782C7.53207 0.78452 7.21549 0.78452 7.02022 0.979782Z"
+                  fill="#FA6736"
+                ></path>
+              </svg>
+            </div>
           </div>
           <div className="h-full flex w-[752px]">
             <button className="w-[144px] border-r-[1px] border-white flex justify-center items-center gap-1.5 px-3  text-sm bg-[#D2E0D4] text-[#383a38] whitespace-nowrap">
               <img src={abc} alt="" />
               ABC
-              {/* <img src={dots} alt="" /> */}
               <svg
                 width="20"
                 height="20"
@@ -706,7 +730,6 @@ const SpreadsheetPrototype = () => {
             <button className="w-[288px] justify-center border-r-[1px] font-medium border-white flex items-center gap-1.5 px-3 text-sm bg-[#DCCFFC] text-[#463E59] whitespace-nowrap">
               <img src={whiteS} alt="" className="text-white" />
               Answer a question
-              {/* <img src={dots} alt="" /> */}
               <svg
                 width="20"
                 height="20"
@@ -723,7 +746,6 @@ const SpreadsheetPrototype = () => {
             <button className="w-[145px] flex items-center justify-center gap-1.5 px-3 text-sm bg-[#FAC2AF] text-[#695149] whitespace-nowrap">
               <img src={whiteS} alt="" />
               Extract
-              {/* <img src={dots} alt="" /> */}
               <svg
                 width="20"
                 height="20"
@@ -747,7 +769,6 @@ const SpreadsheetPrototype = () => {
       {/* Spreadsheet */}
       <div className="flex-1 overflow-auto">
         <div className="min-w-full">
-          {/* Column Headers - Hidden on mobile */}
           {!isMobile && (
             <div className="bg-gray-50 border-b border-gray-200 sticky top-0 z-10">
               <div className="flex h-9">
