@@ -768,7 +768,7 @@ const SpreadsheetPrototype = () => {
 
       {/* Spreadsheet */}
       <div className="flex-1 overflow-auto">
-        <div className="min-w-full">
+        <div className="min-w-[90%]">
           {!isMobile && (
             <div className="bg-gray-50 border-b border-gray-200 sticky top-0 z-10">
               <div className="flex h-9">
@@ -991,7 +991,7 @@ const SpreadsheetPrototype = () => {
                       }`}
                       onClick={() => handleCellClick(index, "taskName")}
                     >
-                      <div className="font-medium">{task.taskName}</div>
+                      <div className="font-medium ">{task.taskName}</div>
                     </div>
                     <div
                       className={`text-end w-36 px-4 text-sm border-[1px] border-zinc-100 text-gray-900 h-[40px] flex items-center ${
